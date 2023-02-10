@@ -3,12 +3,15 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Loader , Card , FormField } from '../components'
 
-const RanderCards = ({data , title}) => {
- if(data.lenght > 0) {
-    return data.map((post) => <Card key={post.id} {...post}/>)
- }else;
-    return <h1> {title} </h1>
+
+const RenderCard = ({data , title}) => {
+  if(data?.length > 0 ) {
+    return data.map((post) => <Card key={post._id} {...post}/>)
+  }else {
+    return <h2 className='mt-5 font-bolt text-[#6449ff] uppercase'>{title}</h2>
+  }
 }
+
 
 const Home = () => {
 
@@ -38,22 +41,20 @@ D
               <div>
 
                 {searchText ? (
-                  <RanderCards
+                  <RenderCard
                   data={[]}
-                  title="post 1"
+                  title="No Search Results found"
                   />
                 ) : (
-
-                  <RanderCards 
+                  <RenderCard
                   data={[]}
-                  title="post 2"
-                  />
+                  title="No Posts found"/>
                 )}
 
+              
               </div>
           )}
       </div>
-
     </section>
   )
 }
