@@ -8,8 +8,13 @@ export const getRandomPrompt = (prompt) => {
     if (randomPrompt === prompt) return getRandomPrompt(prompt)
 
     return randomPrompt;
+    
 
 }
+
+getRandomPrompt()
+console.log(getRandomPrompt(surpriseMePrompts))
+
 
 
 
