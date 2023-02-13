@@ -12,7 +12,6 @@ export const getRandomPrompt = (prompt) => {
 
 }
 
-getRandomPrompt()
 console.log(getRandomPrompt(surpriseMePrompts))
 
 
