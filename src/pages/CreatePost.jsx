@@ -88,9 +88,11 @@ const CreatePost = () => {
            onClick={generatingImage} 
            className="text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
            >
-
           {generatingImage ? 'Generating...' : 'Generate'}
           </button>
+          </div>
+
+          
           <div className='mt-10'>
               <p className='mt-2 text-[#666e75] text-[14px]'>once you have create your image your image you want , you can share it with others in the community</p>
               <button
@@ -102,7 +104,7 @@ const CreatePost = () => {
               </button>
 
           </div>
-        </div>
+       
       </form>
     </section>
   )
